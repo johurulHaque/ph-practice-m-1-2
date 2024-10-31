@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* milestone-1 style */
+#m-1 hr {
+    margin: 0px 100px;
+    background-color: rebeccapurple;
+    padding: 10px;
+}
+
+#m-1 h5::after {
+    content: '.pdf';
+    color: red;
+}
+
+#m-1 h5::before {
+    content: 'start';
+    color: red;
+}
+
+/*-------------------------- 
+    flex style 
+-------------------------*/
+#flex-7-8 img {
+    width: 50%;
+    height: 50%;
+}
+
+#flex-7-8 {
+    display: flex;
+    height: 100vh;
+
+}
+
+#flex-7-8>div {}
+
+@media screen and (max-width:700px) {
+    #flex-7-8 {
+        flex-direction: column;
+
+    }
+
+    #flex-7-8 img {
+        width: 100%;
+    }
+}
+
+/* flex-7-9-1 */
+#flex-7-9-1 {
+    display: flex;
+    height: 40vh;
+    gap: 5px;
+}
+
+#flex-7-9-1 div:first-child {
+    background-color: red;
+    color: white;
+    flex-basis: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#flex-7-9-1 div:last-child {
+    background-color: green;
+    color: white;
+    flex-basis: 66%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:700px) {
+    #flex-7-9-1 {
+        flex-direction: column;
+    }
+
+}
+
+/* flex-7-9-2 */
+#grid-7-9-2 {
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 100px);
+}
+
+#grid-7-9-2 div {
+    color: white;
+}
+
+#grid-7-9-2 .purple {
+    background-color: rgb(233, 8, 38);
+    grid-row: span 3;
+}
+
+#grid-7-9-2 .orange {
+    background-color: orange;
+    grid-row: span 2;
+}
+
+#grid-7-9-2 .magenta {
+    background-color: rgb(85, 2, 250);
+    /* flex-basis: 50%; */
+    flex-grow: 1;
+}
+
+#grid-7-9-2 .gray {
+    background-color: gray;
+    flex-grow: 1;
+    /* flex-basis: 50%; */
+}
+
+#grid-7-9-2 .flex {
+    display: flex;
+    gap: 2px;
+}
+
+@media screen and (max-width:700px) {
+    #grid-7-9-2 {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    #grid-7-9-2 div {
+        flex-basis: 100px;
+        overflow: hidden;
+        /* flex-grow: 1; */
+    }
+
+    #grid-7-9-2 .flex {
+        flex-basis: 200px;
+        flex-direction: column;
+    }
+
+    #grid-7-9-2 .magenta {
+        flex-grow: 1;
+    }
+
+    #grid-7-9-2 .gray {
+        flex-grow: 1;
+    }
+
+}
+
+/* flex-7-9-3 */
+#flex-7-9-3 img {
+    width: 100%;
+    height: 100vh;
+}
+
+/* flex-7-9-4 */
+#flex-7-9-4 img {
+    width: 100%;
+    height: 100%;
+}
+
+#flex-7-9-4 .item {
+    display: flex;
+}
+
+#flex-7-9-4 .image {
+    flex: 2;
+}
+
+#flex-7-9-4 .image img {
+
+    height: 30vh;
+}
+
+#flex-7-9-4 .text {
+    flex: 1;
+}
+
+@media screen and (max-width:700px) {
+    #flex-7-9-4 .item {
+        flex-direction: column;
+    }
+}
+
+/* #flex-7-9-5  */
+#flex-7-9-5 img {
+    width: 100%;
+    height: 100%;
+}
+
+#flex-7-9-5 .item1,
+.item2 {
+    display: flex;
+    height: 50vh;
+    gap: 10px;
+    border: 5px solid yellow;
+}
+
+#flex-7-9-5 .item1 {
+
+    border: 5px solid yellow;
+}
+
+#flex-7-9-5 .item2 {
+    border: 5px solid red;
+}
+
+#flex-7-9-5 .item1 div,
+.item2 div {
+    flex: 1;
+}
+
+#flex-7-9-5 .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:700px) {
+    #flex-7-9-5 .item1 {
+        flex-direction: column;
+        height: 50vh;
+    }
+
+    #flex-7-9-5 .item1 div,
+    .item2 div {
+        height: 50%;
+    }
+
+    #flex-7-9-5 .item1 div img,
+    .item2 div img {
+        object-fit: cover;
+    }
+
+    #flex-7-9-5 .item2 {
+        flex-direction:
+            column-reverse;
+        height: 50vh;
+    }
+}
+
+/* #flex-8-2 */
+#flex-8-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+#flex-8-2 .row1 {
+    height: 300px;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+#flex-8-2 .row2 {
+    height: 300px;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+#flex-8-2 .row3 {
+    height: 300px;
+    display: flex;
+    /* margin-bottom: 5px; */
+}
+
+#flex-8-2 .row1>div {
+    flex: 1;
+}
+
+#flex-8-2 .row2>div {
+    flex: 1;
+}
+
+#flex-8-2 .row3>div {
+    flex: 1;
+}
+
+#flex-8-2 .multi-image {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#flex-8-2 .multi-image>div {
+    height: calc((300px - 5px) / 2);
+}
+
+#flex-8-2 .grid-img {
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width:800px) {
+    #flex-8-2 .row1 {
+        height: 300px;
+    }
+
+    #flex-8-2 .row2 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #flex-8-2 .row2 img {
+        height: 300px;
+    }
+
+    #flex-8-2 .multi-image {
+        flex-direction: row;
+    }
+
+    #flex-8-2 .multi-image div {
+        flex: 1;
+        height: 100%;
+    }
+
+    #flex-8-2 .row3 {
+        height: auto;
+        flex-direction: column;
+    }
+
+    #flex-8-2 .row3 img {
+        height: 300px;
+    }
+
+    #flex-8-2 .grid-img {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* #flex-8-3 */
+#flex-8-3 {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-auto-rows: 30px;
+    gap: 5px;
+}
+
+#flex-8-3 div {
+    background-color: gray;
+}
+
+#flex-8-3 .box-1 {
+    grid-row: span 5;
+}
+
+#flex-8-3 .box-11,
+.box-12 {
+    grid-column: span 3;
+}
+
+#flex-8-3 .box-6,
+#flex-8-3 .box-7,
+#flex-8-3 .box-9,
+#flex-8-3 .box-10 {
+    background-color: red;
+}
+
+/* #flex-8-4  */
+#flex-8-4 {
+    display: grid;
+    gap: 5px;
+    grid-template-areas:
+        'header header header header'
+        'nav main main sidebar'
+        'nav main main advertise'
+        'footer footer footer footer'
+    ;
+    grid-template-rows: 50px 100px 50px;
+    grid-auto-rows: 50px;
+    color: white;
+
+}
+
+#flex-8-4 .box-1 {
+    grid-area: header;
+    background-color: blueviolet;
+}
+
+#flex-8-4 .box-2 {
+    grid-area: nav;
+    background-color: blue;
+}
+
+#flex-8-4 .box-3 {
+    grid-area: main;
+    background-color: lightseagreen;
+}
+
+#flex-8-4 .box-4 {
+    grid-area: sidebar;
+    background-color: yellowgreen;
+}
+
+#flex-8-4 .box-5 {
+    grid-area: advertise;
+    background-color: rgb(235, 16, 16);
+}
+
+#flex-8-4 .box-6 {
+    grid-area: footer;
+    background-color: #fa00d9;
+}
+
+@media screen and (max-width:700px) {
+    #flex-8-4 {
+        grid-template-areas:
+            'header header header header'
+            'nav nav nav nav'
+            'main main sidebar sidebar'
+            'main main advertise advertise'
+            'footer footer footer footer'
+        ;
+        grid-template-rows: 40px 60px 40px;
+        grid-auto-rows: 50px;
+        color: yellow;
+    }
+
+    #flex-8-4 .box-2 {
+        display: flex;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #flex-8-4 {
+        grid-template-areas:
+            'header header header header'
+            'nav nav nav nav'
+            'main main main main'
+            'sidebar sidebar sidebar sidebar'
+            'advertise advertise advertise advertise'
+            'footer footer footer footer'
+        ;
+        grid-template-rows: repeat(6, 60px);
+    }
+}
+
+/*-------------------------- 
+    grid and flex calender 
+-------------------------*/
+#grid-date {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 30px repeat(6, 60px);
+    grid-gap: 1px;
+    justify-content: center;
+    align-content: center;
+    height: 90vh;
+    border: 5px solid greenyellow;
+}
+
+#grid-date .date {
+    background-color: slateblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid-date .day {
+    background-color: gray;
+    font-weight: 700;
+    color: yellow;
+}
+
+@media screen and (max-width:900px) {
+    #grid-date {
+        grid-template-rows: 30px repeat(4, 40px);
+    }
+}

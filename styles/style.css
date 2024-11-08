@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
 
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
+    max-width: 1800px;
+    width: 90%;
+    margin: 0 auto;
 
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
 
 /* milestone-1 style */
 #m-1 hr {
@@ -198,9 +203,9 @@ body {
     width: 100%;
     height: 100%;
 }
-
+/* #flex-7-9-5 before .item2 not; if any issue then remove it */
 #flex-7-9-5 .item1,
-.item2 {
+#flex-7-9-5 .item2 {
     display: flex;
     height: 50vh;
     gap: 10px;
@@ -480,5 +485,119 @@ body {
 @media screen and (max-width:900px) {
     #grid-date {
         grid-template-rows: 30px repeat(4, 40px);
+    }
+}
+
+/* module 10 */
+#m-10-3 >p {
+    white-space: nowrap;            
+    overflow: hidden;            
+    text-overflow: ellipsis;            
+    width: 500px;
+}
+
+#m-10-4 .scale{
+    border: 1px solid;
+    width: 400px;
+    background: blueviolet;
+    color: aliceblue;
+    transform: scale(-1.5);
+}
+#m-10-4 .box1 {            
+    background-color: antiquewhite;
+    border: 1px solid;
+    height: 200px;
+    width: 200px;
+    transition: width 2s ease-in-out 1s, background-color 2s ease-in 3s;            
+}
+
+#m-10-4 .box1:hover {          
+    width: 300px;  
+    background-color: blueviolet;
+}   
+#m-10-4 .box2 {            
+    background-color: gold;
+    border: 1px solid;
+    height: 200px;
+    width: 200px;
+    transition: transform 2s ease-in-out;            
+}
+
+#m-10-4 .box2:hover {          
+    transform: rotate(-50deg) scale(0.5) skew(40deg) translateX(200px);
+}   
+
+#m-10-5 .field {
+    min-height: 200px;
+    background-color: rgba(172, 255, 47, 0.13);            
+}
+
+#m-10-5 .bat {
+    transition: transform 2s ease-in;            
+}
+
+#m-10-5 .field:hover .bat{
+    transform: rotate(-60deg);
+    transform-origin: top right;
+}
+
+#m-10-5 .ball {
+    position: relative;
+    bottom: 50px;
+    left: 330px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red;
+    transition: transform 2s ease 2s;
+}
+
+#m-10-5 .field:hover .ball{
+    transform: translateX(600px) translateY(-100px);
+}
+#m-10-6 {
+    border: 1px solid green;
+    height: 400px;
+}
+#m-10-6 div { 
+    width: 100px;
+    height: 100px;  
+    border-radius: 50%;   
+    background-color: green;       
+    position: relative;
+    animation-name: animate;   
+    animation-duration: 5s; 
+    animation-iteration-count:2;                 
+    animation-direction:normal;
+    animation-fill-mode: forwards;            
+}
+
+@keyframes animate {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+    25% {
+        top: 300px;
+        left: 0px;
+        background-color: red;
+        transform: scale(.5);  
+    }
+    50% {
+        top: 300px;
+        left: 300px;
+        background-color: yellow;
+        transform: scale(.6);  
+    }
+    75% {
+        top: 0px;
+        left: 300px;
+        background-color: blueviolet;
+        transform: scale(.8);  
+    }
+    100% {
+        top: 0px;
+        left: 100px;
+        transform: scale(1);
     }
 }
